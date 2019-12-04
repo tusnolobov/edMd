@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const Hi = () => (
-  <>
-    <h1>YO</h1>
-    <p>BOI</p>
-  </>
-);
+import { Layout } from '../components/Layout/layout';
+import { Editor } from '../components/Editor/editor';
+import { Preview } from '../components/Preview/preview';
 
-export default Hi;
+const App = () => {
+  const [state, setState] = useState('');
+
+  return (
+    <Layout>
+      <Editor state={state} setState={setState} />
+      <Preview state={state} />
+    </Layout>
+  );
+};
+
+export default App;
