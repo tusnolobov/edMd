@@ -10,11 +10,15 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.jsx .",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx|json)\"",
+    "format": "yarn run prettier --list-different",
+    "validate": "npm-run-all --parallel lint build"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged && yarn run build"
     }
   },
   "lint-staged": {
@@ -34,6 +38,7 @@
     "eslint-plugin-react": "^7.17.0",
     "husky": "^3.1.0",
     "lint-staged": "^9.5.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "^1.19.1"
   },
   "dependencies": {
