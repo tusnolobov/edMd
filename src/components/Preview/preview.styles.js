@@ -10,7 +10,7 @@ export const PreviewContainer = styled.article`
   border-radius: 4px;
   box-shadow: 0 0 1px 1px #dadada;
 
-  & > * :first-child {
+  & > * :first-of-type {
     margin-top: 0;
   }
 
