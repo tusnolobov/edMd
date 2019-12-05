@@ -3,10 +3,11 @@ import styled from '@emotion/styled';
 export const Textarea = styled.textarea`
   grid-area: 'editor';
   display: block;
-  padding: 1.6rem 2rem;
+  padding: 3rem 4.8rem 0;
   font-family: sans-serif;
   font-size: 1.8rem;
   line-height: 1.5;
+  color: #152833;
   border: 0;
   box-shadow: 0 0 1px 1px #dadada;
   border-radius: 4px;

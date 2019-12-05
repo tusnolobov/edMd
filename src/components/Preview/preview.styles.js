@@ -2,14 +2,17 @@ import styled from '@emotion/styled';
 
 export const PreviewContainer = styled.article`
   grid-area: 'preview';
-  padding: 0 4rem;
+  padding: 3rem 4.8rem;
   font-size: 1.8rem;
   font-family: sans-serif;
+  line-height: 1.5;
+  color: #152833;
   border-radius: 4px;
-  background: #f2f2f2;
-  overflow-x: hidden;
-  overflow-y: auto;
-  word-wrap: break-word;
+  box-shadow: 0 0 1px 1px #dadada;
+
+  & > * :first-child {
+    margin-top: 0;
+  }
 
   /* Scrollbar */
   overscroll-behavior: contain;

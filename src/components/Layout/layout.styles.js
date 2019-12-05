@@ -16,7 +16,6 @@ export const GlobalStyles = css`
     margin: 0;
     padding: 0;
     font-size: 1.6rem;
-    color: #152833;
   }
 
   main {
