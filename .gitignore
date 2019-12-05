@@ -28,6 +28,8 @@ yarn-error.log*
 dist/
 build/
 .next/
+.cache/
+public/
 
 # Serverless generated files
 .serverless/
