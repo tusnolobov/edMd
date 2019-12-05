@@ -4,12 +4,12 @@ import ReactMarkdown from 'react-markdown';
 
 import { PreviewContainer } from './preview.styles';
 
-export const Preview = ({ content }) => (
+export const Preview = ({ note }) => (
   <PreviewContainer>
-    <ReactMarkdown source={content} />
+    <ReactMarkdown source={note} />
   </PreviewContainer>
 );
 
 Preview.propTypes = {
-  content: PropTypes.string,
+  note: PropTypes.string,
 };

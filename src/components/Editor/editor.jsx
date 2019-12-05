@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 
 import { Textarea } from './editor.styles';
 
-export const Editor = ({ content, setContent }) => {
+export const Editor = ({ note, setNote }) => {
   const handleChange = event => {
-    setContent(event.target.value);
+    setNote(event.target.value);
   };
 
   return (
     <Textarea
-      value={content}
+      value={note}
       onChange={handleChange}
       spellCheck={false}
       placeholder="Start with simple # and you'll get a heading..."
@@ -19,6 +19,6 @@ export const Editor = ({ content, setContent }) => {
 };
 
 Editor.propTypes = {
-  content: PropTypes.string,
-  setContent: PropTypes.func,
+  note: PropTypes.string,
+  setNote: PropTypes.func,
 };
