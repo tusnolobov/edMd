@@ -1,15 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useContext } from 'react';
 import ReactMarkdown from 'react-markdown';
+
+import { store } from '../../state/store';
 
 import { PreviewContainer } from './preview.styles';
 
-export const Preview = ({ note }) => (
-  <PreviewContainer>
-    <ReactMarkdown source={note} />
-  </PreviewContainer>
-);
+export const Preview = () => {
+  const { state } = useContext(store);
 
-Preview.propTypes = {
-  note: PropTypes.string,
+  return (
+    <PreviewContainer>
+      <ReactMarkdown source={state.note} />
+    </PreviewContainer>
+  );
 };
