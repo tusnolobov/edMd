@@ -24,12 +24,15 @@ export const Layout = ({ children }) => {
           margin: 0;
           padding: 0;
           font-size: 1.6rem;
+          color: #152833;
         }
 
         main {
-          display: flex;
-          height: 95vh;
-          padding: 1.6rem;
+          display: grid;
+          grid-template-columns: minmax(3rem, 1fr) 2fr;
+          grid-template-areas: 'editor preview preview';
+          height: 90vh;
+          padding: 0 1.6rem;
         }
       `}</style>
     </>

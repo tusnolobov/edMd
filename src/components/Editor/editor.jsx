@@ -8,13 +8,30 @@ export const Editor = ({ state, setState }) => {
 
   return (
     <>
-      <textarea value={state} onChange={handleChange}></textarea>
+      <textarea
+        value={state}
+        onChange={handleChange}
+        spellCheck={false}
+        placeholder="Start with simple # and you'll get a heading..."
+      ></textarea>
       <style jsx>
         {`
           textarea {
-            width: 50%;
-            padding: 0.8rem 1rem;
-            resize: none;
+            grid-area: 'editor';
+            display: block;
+            padding: 1.6rem 2rem;
+            font-size: 1.8rem;
+            line-height: 1.5;
+            border: 0;
+            box-shadow: 0 0 0 1px #dadada;
+            border-radius: 4px;
+            transition: box-shadow 0.2s ease;
+            resize: horizontal;
+          }
+
+          textarea:focus {
+            box-shadow: 0 0 0 2px #46a1f4;
+            outline: none;
           }
         `}
       </style>

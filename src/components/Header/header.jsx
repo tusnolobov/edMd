@@ -6,13 +6,16 @@ export const Header = () => {
       <h3>edMD</h3>
       <style jsx>{`
         header {
-          height: 5vh;
+          display: flex;
+          align-items: center;
+          height: 10vh;
           padding: 0 1.6rem;
-          background-color: #f7f7f7;
         }
 
         h3 {
           margin: 0;
+          font-size: 3.2rem;
+          color: #152833;
         }
       `}</style>
     </header>
