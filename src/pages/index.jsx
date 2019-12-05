@@ -5,12 +5,12 @@ import { Editor } from '../components/Editor/editor';
 import { Preview } from '../components/Preview/preview';
 
 const App = () => {
-  const [state, setState] = useState('');
+  const [content, setContent] = useState('');
 
   return (
     <Layout>
-      <Editor state={state} setState={setState} />
-      <Preview state={state} />
+      <Editor content={content} setContent={setContent} />
+      <Preview content={content} />
     </Layout>
   );
 };
