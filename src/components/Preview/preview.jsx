@@ -10,7 +10,7 @@ export const Preview = () => {
 
   return (
     <PreviewContainer>
-      <ReactMarkdown source={state.note} />
+      <ReactMarkdown source={state.currentNote} />
     </PreviewContainer>
   );
 };

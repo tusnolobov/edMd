@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useRef } from 'react';
 import debounce from 'lodash.debounce';
 
-import { updateNote } from '../../state/features/note/actions';
 import { store } from '../../state/store';
+import { updateCurrentNote } from '../../state/features/current-note/actions';
 
 import { Textarea } from './editor.styles';
 
@@ -11,36 +11,36 @@ export const Editor = () => {
 
   if (typeof window !== 'undefined') {
     useEffect(() => {
-      const noteFromLs = window.localStorage.getItem('note');
+      const noteFromLs = window.localStorage.getItem('currentNote');
 
       if (typeof noteFromLs !== 'undefined') {
-        dispatch(updateNote(noteFromLs));
+        dispatch(updateCurrentNote(noteFromLs));
       }
     }, []);
   }
 
   const handleChange = event => {
-    dispatch(updateNote(event.target.value));
+    dispatch(updateCurrentNote(event.target.value));
     console.log(state);
   };
 
   const debounced = useRef(
     debounce(
-      updatedNote => window.localStorage.setItem('note', updatedNote),
+      updatedNote => window.localStorage.setItem('currentNote', updatedNote),
       500,
     ),
   );
 
   useEffect(() => {
-    debounced.current(state.note);
-  }, [state.note]);
+    debounced.current(state.currentNote);
+  }, [state.currentNote]);
 
   return (
     <Textarea
-      value={state.note}
+      value={state.currentNote}
       onChange={handleChange}
       spellCheck={false}
-      placeholder="Start with simple # and you'll get a heading..."
+      placeholder="Start writing with # Title."
     ></Textarea>
   );
 };

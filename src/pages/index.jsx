@@ -1,11 +1,17 @@
 import React from 'react';
 import { StoreProvider } from '../state/store';
-import { App } from '../components/App/app';
+
+import { Layout } from '../components/Layout/layout';
+import { Editor } from '../components/Editor/editor';
+import { Preview } from '../components/Preview/preview';
 
 const IndexPage = () => {
   return (
     <StoreProvider>
-      <App />
+      <Layout>
+        <Editor />
+        <Preview />
+      </Layout>
     </StoreProvider>
   );
 };
