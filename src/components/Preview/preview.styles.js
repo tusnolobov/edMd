@@ -1,13 +1,15 @@
 import styled from '@emotion/styled';
 
 export const PreviewContainer = styled.article`
-  grid-area: 'preview';
+  ${props => props.preview || 'display: none'};
+  grid-area: preview;
   padding: 3rem 4.8rem;
   font-size: 1.8rem;
   font-family: sans-serif;
   line-height: 1.5;
+  overflow-wrap: break-word;
   color: #152833;
-  border-radius: 4px;
+  border-radius: 0.3rem;
   box-shadow: 0 0 1px 1px #dadada;
 
   & > * :first-of-type {

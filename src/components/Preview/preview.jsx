@@ -9,7 +9,7 @@ export const Preview = () => {
   const { state } = useContext(store);
 
   return (
-    <PreviewContainer>
+    <PreviewContainer preview={state.preview}>
       <ReactMarkdown source={state.currentNote} />
     </PreviewContainer>
   );

@@ -2,7 +2,7 @@ const useCombinedReducers = combinedReducers => {
   const state = Object.keys(combinedReducers).reduce(
     (acc, key) => ({
       ...acc,
-      ...combinedReducers[key][0],
+      [key]: combinedReducers[key][0],
     }),
     {},
   );

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const Textarea = styled.textarea`
-  grid-area: 'editor';
+  grid-area: editor;
   display: block;
   padding: 3rem 4.8rem 0;
   font-family: sans-serif;
@@ -9,8 +9,8 @@ export const Textarea = styled.textarea`
   line-height: 1.5;
   color: #152833;
   border: 0;
+  border-radius: 0.3rem;
   box-shadow: 0 0 1px 1px #dadada;
-  border-radius: 4px;
   transition: box-shadow 0.2s ease;
   resize: none;
 
